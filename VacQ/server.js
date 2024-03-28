@@ -13,8 +13,10 @@ connectDB();
 const hospitals = require('./routes/hospitals');
 const auth = require('./routes/auth');
 const appointments = require('./routes/appointments');
+const cors = require('cors');
 
 const app=express();
+app.use(cors());
 
 // Cookie parser
 app.use(cookieParser());
